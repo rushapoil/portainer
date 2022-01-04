@@ -2,7 +2,6 @@ package endpoints
 
 import (
 	"net/http"
-	"os"
 
 	httperror "github.com/portainer/libhttp/error"
 	"github.com/portainer/libhttp/request"
@@ -44,12 +43,6 @@ func (handler *Handler) endpointInspect(w http.ResponseWriter, r *http.Request) 
 
 	hideFields(endpoint)
 	endpoint.ComposeSyntaxMaxVersion = handler.ComposeStackManager.ComposeSyntaxMaxVersion()
-
-	if agentKey, ok := os.LookupEnv("AGENT_SECRET"); ok {
-		endpoint.SecuritySettings.AgentSecret = agentKey
-	} else {
-		endpoint.SecuritySettings.AgentSecret = ""
-	}
 
 	return response.JSON(w, endpoint)
 }
