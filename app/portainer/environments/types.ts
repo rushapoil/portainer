@@ -68,6 +68,7 @@ export interface Environment {
   URL: string;
   Snapshots: DockerSnapshot[];
   Kubernetes: KubernetesSettings;
+  PublicURL?: string;
 }
 
 /**
