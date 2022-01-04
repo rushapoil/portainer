@@ -208,6 +208,7 @@
     "load-grunt-tasks": "^3.5.2",
     "lodash-webpack-plugin": "^0.11.6",
     "mini-css-extract-plugin": "1",
+    "msw-storybook-addon": "^1.5.0",
     "ngtemplate-loader": "^2.1.0",
     "plop": "^2.6.0",
     "postcss": "7",
